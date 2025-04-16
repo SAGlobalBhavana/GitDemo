@@ -20,5 +20,17 @@ namespace AmazonSearchTest
             driver = new ChromeDriver();
             wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
         }
+        
+      // Test method to search for laptops on Amazon
+        [TestMethod]
+        public void TestSearchLaptopOnAmazon()
+        {
+            // Navigate to Amazon's homepage
+            driver.Navigate().GoToUrl("https://www.amazon.com");
+
+            // Find the search bar by its ID and type 'laptop'
+            IWebElement searchBox = driver.FindElement(By.Id("twotabsearchtextbox"));
+            searchBox.SendKeys("laptop");
+        
     }
 }
