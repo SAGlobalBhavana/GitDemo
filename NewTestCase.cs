@@ -3,7 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
-
+// - Added by BHavanaa 
 // Feature 2 -    // Find and click the search button
  // Find and click the search button - Commit
             IWebElement searchButton = driver.FindElement(By.Id("nav-search-submit-button"));
