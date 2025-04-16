@@ -31,6 +31,10 @@ namespace AmazonSearchTest
             // Find the search bar by its ID and type 'laptop'
             IWebElement searchBox = driver.FindElement(By.Id("twotabsearchtextbox"));
             searchBox.SendKeys("laptop");
+
+              // Find and click the search button
+            IWebElement searchButton = driver.FindElement(By.Id("nav-search-submit-button"));
+            searchButton.Click();
         
     }
 }
