@@ -50,6 +50,25 @@ namespace AmazonSearchTest
               // Find and click the search button
             IWebElement searchButton = driver.FindElement(By.Id("nav-search-submit-button"));
             searchButton.Click();
-        
-    }
+
+         
+        // Cleanup method to close the browser after the test
+        [TestCleanup]
+        public void CleanUp()
+        {
+            // Close the driver (browser)
+            driver.Quit();
+        }
+
+            // New Logic to be added to Home page 
+            // Find the search bar by its ID and type 'laptop'
+            IWebElement searchBox = driver.FindElement(By.Id("twotabsearchtextbox"));
+            searchBox.SendKeys("laptop");
+
+            // Find and click the search button
+            IWebElement searchButton = driver.FindElement(By.Id("nav-search-submit-button"));
+            searchButton.Click();
+
+            // Wait until the page title contains 'laptop', indicating the search results page has loaded
+        }
 }
