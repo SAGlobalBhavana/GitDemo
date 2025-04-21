@@ -53,6 +53,15 @@ namespace AmazonSearchTest
               // Find and click the search button
             IWebElement searchButton = driver.FindElement(By.Id("nav-search-submit-button"));
             searchButton.Click();
-        
+
+         
+        // Cleanup method to close the browser after the test
+        [TestCleanup]
+        public void CleanUp()
+        {
+            // Close the driver (browser)
+            driver.Quit();
+        }
+         
     }
 }
